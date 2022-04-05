@@ -16,6 +16,28 @@ fn main() {
 
     println!("Function calls: {:?} {:?} {:?}", add_x, add_y, add_z);
 
+    let if_a = 99;
+
+    println!("If: {:?}", if_a);
+    
+    if if_a > 99 {
+        println!("{:?} is Big number", if_a);
+    } else {
+        println!("{:?} is Small number", if_a);
+    }
+    println!("Normal control flow");
+
+    if if_a > 99 {
+        if if_a > 200 {
+            println!("{:?} is Huge number", if_a);
+        } else {
+            println!("{:?} is Big number", if_a);
+        }
+    } else {
+        println!("{:?} is Small number", if_a);
+    }
+    println!("Nested control flow");
+
     println!("Hello, world!");
 
 }
