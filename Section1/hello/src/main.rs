@@ -38,6 +38,23 @@ fn main() {
     }
     println!("Nested control flow");
 
+    let mut loop_a = 0;
+
+    loop {
+        if loop_a == 5 {
+            break;
+        }
+        println!("Loop: {:?}", loop_a);
+        loop_a = loop_a + 1;
+    }
+
+    let mut while_a = 0;
+
+    while while_a != 5 {
+        println!("While: {:?}", while_a);
+        while_a = while_a + 1;
+    }
+    
     println!("Hello, world!");
 
 }
