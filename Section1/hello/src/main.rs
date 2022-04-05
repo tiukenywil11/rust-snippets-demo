@@ -60,6 +60,15 @@ fn main() {
         while_a = while_a + 1;
     }
     
+    // numeric types, and arithmetic
+    let addition = 2 + 2;
+    let subtraction = 10 - 5;
+    let division = 10 / 2;
+    let multiplication = 5 * 5;
+    let remainder_division = 6 % 3;
+
+    println!("Arithmetic values: {:?} {:?} {:?} {:?} {:?}", addition, subtraction, division, multiplication, remainder_division);
+
     println!("Hello, world!");
 
 }
