@@ -1,5 +1,7 @@
+// this is the entry point of the application.
 fn main() {
 
+    // data type variables
     let integer = 2;
     let string = "hello";
     let character = 'j';
@@ -10,12 +12,14 @@ fn main() {
 
     println!("Variables: {:?} {:?} {:?} {:?} {:?} {:?} {:?}", integer, string, character, float, mutable_string, boolean, variable);
 
+    // function calls
     let add_x = add (1, 1);
     let add_y = add (3, 0);
     let add_z = add (add_x, 1);
 
     println!("Function calls: {:?} {:?} {:?}", add_x, add_y, add_z);
 
+    // control flow statements
     let if_a = 99;
 
     println!("If: {:?}", if_a);
@@ -38,6 +42,7 @@ fn main() {
     }
     println!("Nested control flow");
 
+    // loop statements
     let mut loop_a = 0;
 
     loop {
@@ -59,6 +64,7 @@ fn main() {
 
 }
 
+// add function, takes 2 32-bit integer parameters, and returns a 32-bit integer value
 fn add(a: i32, b: i32) -> i32 {
     a + b
 }
