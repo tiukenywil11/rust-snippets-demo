@@ -1,0 +1,1 @@
+C:\Users\Kenywil-Lenovo\Documents\GitRepos\rust-snippets-demo\Section1\section1_activities\target\debug\section1_activities.exe: C:\Users\Kenywil-Lenovo\Documents\GitRepos\rust-snippets-demo\Section1\section1_activities\src\a1.rs C:\Users\Kenywil-Lenovo\Documents\GitRepos\rust-snippets-demo\Section1\section1_activities\src\main.rs
