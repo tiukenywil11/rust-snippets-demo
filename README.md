@@ -26,4 +26,9 @@ Compilation of code exercises that needs to be accomplished throughout the cours
 - Coding exercise: a4a.rs
 - Coding exercise: a4b.rs
 
-## Section 3 [In Progress]
+## Section 3
+- repetition (loop, while)
+- coding exercise: a5.rs
+- coding exercise: a6.rs
+
+## Section 4 [In Progress]
