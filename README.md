@@ -18,4 +18,12 @@ Compilation of code exercises that needs to be accomplished throughout the cours
 - Numeric type & Arithmetic
 - Coding exercise: a2.rs
 
-## Section 2 [In Progress]
+## Section 2
+- conditional (if, else if, else)
+- match
+- Coding exercise: a3a.rs
+- Coding exercise: a3b.rs
+- Coding exercise: a4a.rs
+- Coding exercise: a4b.rs
+
+## Section 3 [In Progress]
