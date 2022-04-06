@@ -9,6 +9,14 @@ fn main() {
             break;
         }
     }
-    println!("done!");
+    println!("done with loop!");
+
+    let mut while_i = 1;
+
+    while while_i <= 3 {
+        println!("{:?}", while_i);
+        while_i = while_i + 1;
+    }
+    println!("done with while!");
 
 }
