@@ -25,6 +25,11 @@ struct ShippingBox {
     height: i32,
 }
 
+struct GroceryItem {
+    stock: i32,
+    price: f64,
+}
+
 fn main() {
 
     // takes the argument Direction
@@ -38,5 +43,13 @@ fn main() {
 
     let tall = my_box.height;
     println!("the box is {:?} units tall", tall);
+
+    let cereal = GroceryItem {
+        stock: 10,
+        price: 2.99,
+    };
+
+    println!("stock: {:?}", cereal.stock);
+    println!("price: {:?}", cereal.price);
 
 }
