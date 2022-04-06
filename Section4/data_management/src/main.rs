@@ -1,10 +1,3 @@
-fn main() {
-
-    // takes the argument Direction
-    println!("{:?}", which_way(Direction::Left));
-
-}
-
 enum Direction {
     Up,
     Down,
@@ -24,4 +17,26 @@ fn which_way<'life>(go: Direction) -> &'life str{
     };
 
     return temp;
+}
+
+struct ShippingBox {
+    depth: i32,
+    width: i32,
+    height: i32,
+}
+
+fn main() {
+
+    // takes the argument Direction
+    println!("{:?}", which_way(Direction::Left));
+
+    let my_box = ShippingBox {
+        depth: 3,
+        width: 2,
+        height: 5,
+    };
+
+    let tall = my_box.height;
+    println!("the box is {:?} units tall", tall);
+
 }
