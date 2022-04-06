@@ -9,28 +9,30 @@
 // * Use a function to print out the drink flavor and ounces
 // * Use a match expression to print the drink flavor
 
-
-struct Drink {
-    flavor: &'static str,
-    fluid_ounce: i32, 
+pub enum Flavor {
+    Orange,
+    Apple,
+    Grapes
 }
 
-pub fn getDrink<'life>() -> &'life str {
+pub struct Drink {
+    pub flavor: Flavor,
+    pub fluid_ounce: i32, 
+}
 
-    let mut flavor = "";
+pub fn getDrink<'life>(drink:Drink) -> &'life str {
 
-    let orange_drink = Drink {
-        flavor: "orange",
-        fluid_ounce: 12,
-    };
-
-    println!("{:?}, {:?}", orange_drink.flavor, orange_drink.fluid_ounce);
+    let mut temp = "";
     
-    match orange_drink.flavor {
-        orange => flavor = "orange",
+    match drink.flavor {
+        Flavor::Orange => temp = "orange",
+        Flavor::Apple => temp = "apple",
+        Flavor::Grapes => temp = "grape",
     }
 
-    println!("{:?}", flavor);
-    return flavor;
+    println!("{:?}, {:?}", temp, drink.fluid_ounce);
+
+    println!("{:?}", temp);
+    return temp;
 
 }
