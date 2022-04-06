@@ -9,13 +9,16 @@
 // * Print the variable within the loop statement
 // * Use break to exit the loop
 
-pub fn incrementTo4(count:i32) {
+pub fn increment1Through4(count:i32) {
 
     let mut temp = count;
 
     loop {
         if temp > 4 {
             println!("{:?} is greater than 4", temp);
+            break;
+        } else if temp < 1 {
+            println!("{:?} is less than 1", temp);
             break;
         }
         println!("{:?}", temp);
