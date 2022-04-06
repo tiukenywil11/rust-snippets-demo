@@ -1,0 +1,1 @@
+C:\Users\Kenywil-Lenovo\Documents\GitRepos\rust-snippets-demo\Section2\conditionals\target\debug\conditionals.exe: C:\Users\Kenywil-Lenovo\Documents\GitRepos\rust-snippets-demo\Section2\conditionals\src\main.rs
