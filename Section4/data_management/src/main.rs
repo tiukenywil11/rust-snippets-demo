@@ -30,6 +30,15 @@ struct GroceryItem {
     price: f64,
 }
 
+enum Access {
+    Full,
+}
+
+// create a tuple, surrounded by parethesis
+fn one_two_three() -> (i32, i32, i32) {
+    (1,2,3)
+}
+
 fn main() {
 
     // takes the argument Direction
@@ -51,5 +60,15 @@ fn main() {
 
     println!("stock: {:?}", cereal.stock);
     println!("price: {:?}", cereal.price);
+
+    let numbers = one_two_three();
+    // destructure tuple, and put them in individual variables
+    let (x, y, z) = one_two_three();
+    println!("{:?} {:?}", x, numbers.0);
+    println!("{:?} {:?}", y, numbers.1);
+    println!("{:?} {:?}", z, numbers.2);
+
+    // create a tuple, with an enum value
+    let (employee, access) = ("Jake", Access::Full);
 
 }
