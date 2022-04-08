@@ -31,4 +31,13 @@ Compilation of code exercises that needs to be accomplished throughout the cours
 - coding exercise: a5.rs
 - coding exercise: a6.rs
 
-## Section 4 [In Progress]
+## Section 4
+- data management
+- enum
+- struct
+- tuple
+- coding exercise: a7.rs
+- coding exercise: a8.rs
+- coding exercise: a9.rs
+
+## Section 5 [In Progress]
