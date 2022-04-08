@@ -71,4 +71,19 @@ fn main() {
     // create a tuple, with an enum value
     let (employee, access) = ("Jake", Access::Full);
 
+    let coord = (2, 3);
+    println!("{:?} {:?}", coord.0, coord.1);
+
+    let (x, y) = (2, 3);
+    println!("{:?} {:?}", x, y);
+
+    let user_info = ("Emma", 20);
+    let (name, age) = ("Emma", 20);
+
+    // this should be replaced by structures
+    // best practice: tuples should be limited to 3
+    let favorites = ("red", 14, "TX", "pizza", "TV SHOW", "home");
+    let state = favorites.2;
+    let place = favorites.5;
+
 }
