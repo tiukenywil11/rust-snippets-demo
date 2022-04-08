@@ -1,5 +1,6 @@
 mod a7;
 mod a8;
+mod a9;
 
 fn main() {
 
@@ -12,5 +13,7 @@ fn main() {
     a7::colorPicker(a7::Color::Red);
     // call function from a8.rs, takes argument Flavor
     a8::getDrink(orange_drink);
+    // call function from a9.rs, takes argument tuple
+    a9::getCoordinates((1,1));
 
 }
