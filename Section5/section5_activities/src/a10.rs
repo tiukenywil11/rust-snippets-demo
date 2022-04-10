@@ -16,15 +16,11 @@ pub fn valueExpression<'life>(value:i32) -> &'life str {
 
     let mut temp = "";
 
-    let result = if value > 100 {
-        true
-    } else {
-        false
-    } ;
+    let is_gt_100 = value > 100;
 
-    match result {
-        true => temp = "> 100",
-        false => temp = "<= 100"
+    match is_gt_100 {
+        true => temp = "its big",
+        false => temp = "its small"
     };
 
     println!("{:?}", temp);
