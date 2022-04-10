@@ -17,6 +17,7 @@ enum Light {
     Dull,
 }
 
+
 // a - 'dull' variable passed to 'display_light' is now owned by 'display_light' function, and called 'light'
 // a - once function 'display_light' finishes, it deletes the 'light(dull)' variable
 // fn display_light(light:Light) {
@@ -32,6 +33,21 @@ fn display_light(light: &Light) {
     }    
 } // a - function ends, and 'light' variable is deleted, and cannot be called into the function 'display_light' again
 // b - function ends, and 'dull' is returned to 'main' function, as 'display_light' is not the owner of 'dull'
+
+
+struct Book {
+    pages: i32,
+    rating: i32,
+}
+
+// parameters with '&' only gets the reference of the value, and not the original value
+fn display_page_count(book: &Book) {
+    println!("pages = {:?}", book.pages);
+}
+
+fn display_rating(book: &Book) {
+    println!("rating = {:?}", book.rating);
+}
 
 fn main() {
 
@@ -101,5 +117,16 @@ fn main() {
     // b - pass a reference of 'dull' to 'display_light' function
     display_light(&dull);
     display_light(&dull);
+
+    // variable 'book' is owned by 'main' function
+    let book = Book {
+        pages: 5,
+        rating: 9,
+    };
+
+    // adding '&' to the argument to lend 'book' to functions 'display_page_count' and 'display_rating'
+    // lending the reference of 'book' won't give ownership to the functions, and won't allow them to delete the variable 'book' after use
+    display_page_count(&book);
+    display_rating(&book);
 
 }
