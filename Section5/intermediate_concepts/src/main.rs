@@ -4,6 +4,13 @@ enum Menu {
     Drink,
 }
 
+enum Access {
+    Admin,
+    Manager,
+    User,
+    Guest
+}
+
 fn main() {
 
     // expression
@@ -45,5 +52,15 @@ fn main() {
     };
 
     println!("{:?}", order_placed);
+
+    // demo: exxpressions
+
+    let access_level = Access::Guest;
+    let can_access_file = match access_level {
+        Access::Admin => true,
+        _ => false,
+    };
+
+    println!("can access {:?}", can_access_file);
 
 }
