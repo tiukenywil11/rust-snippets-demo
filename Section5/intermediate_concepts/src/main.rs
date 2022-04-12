@@ -67,6 +67,11 @@ impl Temperature {
         Self { degrees_f: 32.0 }
     }
 
+    // Self returns 'Temperature'
+    fn boiling() -> Self {
+        Self { degrees_f: 212.0 }
+    }
+
     // use reference &self, instead of temp::Temperature
     fn show_temp(&self) {
         println!("{:?} degrees F", self.degrees_f);
@@ -166,5 +171,8 @@ fn main() {
 
     let cold = Temperature::freezing();
     cold.show_temp();
+
+    let boiling = Temperature::boiling();
+    boiling.show_temp();
 
 }
