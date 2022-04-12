@@ -49,6 +49,31 @@ fn display_rating(book: &Book) {
     println!("rating = {:?}", book.rating);
 }
 
+
+// implementing functions
+struct Temperature {
+    degrees_f: f64,
+}
+
+/* Original function, before changing to impl
+fn show_temp(temp::Temparature) {
+    println!("{:?} degrees F", temp.degrees_f);
+}*/
+
+impl Temperature {
+
+    // Self returns 'Temperature'
+    fn freezing() -> Self {
+        Self { degrees_f: 32.0 }
+    }
+
+    // use reference &self, instead of temp::Temperature
+    fn show_temp(&self) {
+        println!("{:?} degrees F", self.degrees_f);
+    }
+}
+
+
 fn main() {
 
     // expression
@@ -128,5 +153,18 @@ fn main() {
     // lending the reference of 'book' won't give ownership to the functions, and won't allow them to delete the variable 'book' after use
     display_page_count(&book);
     display_rating(&book);
+
+    // implementing functions
+    let hot = Temperature { degrees_f: 99.9 };
+
+    /* Original function, before changing to impl
+    Temperature::show_temp(hot);
+    */
+
+    // call function of Temperature type
+    hot.show_temp();
+
+    let cold = Temperature::freezing();
+    cold.show_temp();
 
 }
