@@ -16,44 +16,76 @@ enum Color {
     Yellow
 }
 
+impl Color {
 
-struct ShippingBox{
-    dimensions: i32,
-    weight: i32,
-    color: Color
-}
-
-impl ShippingBox {
-
-    fn createNewBox() -> Self {
-        Self {
-            dimensions: 10,
-            weight: 10,
-            color: Color::Red
-        }
-    } 
-
-    fn showBox(&self) {
+    fn stringColor<'life>(&self) -> &'life str {
 
         let mut temp = "";
 
-        match self.color {
+        match self {
             Color::Red => temp = "red",
             Color::Blue => temp = "blue",
             Color::Yellow => temp = "yellow",
             _=> println!("color not found")
         }
 
-        println!{"{:?}", self.dimensions};
-        println!{"{:?}", self.weight};
-        println!{"{:?}", temp};
+        return temp;
+
+    }
+}
+
+struct Dimension {
+    length: i32,
+    width: i32,
+    height: i32
+}
+
+impl Dimension {
+
+    fn stringDimension(&self) {
+        println!("length: {:?}", self.length);
+        println!("width: {:?}", self.width);
+        println!("height: {:?}", self.height);
+
+    }
+}
+
+struct ShippingBox{
+    dimension: Dimension,
+    weight: i32,
+    color: Color
+}
+
+impl ShippingBox {
+
+    // automatically gets values from parameters, Color and Dimension can be called, because it is part of struct ShippingBox
+    fn createNewBox(weight: i32, color: Color, dimension: Dimension) -> Self {
+        Self {
+            dimension,
+            weight,
+            color
+        }
+    } 
+
+    fn showBox(&self) {
+
+        self.dimension.stringDimension();
+        println!{"weight: {:?}", self.weight};
+        println!{"color: {:?}", self.color.stringColor()};
     }
 
 }
 
 pub fn getBox() {
 
-    let newBox = ShippingBox::createNewBox();
+    let dimension = Dimension {
+        length: 2,
+        width: 2,
+        height: 2
+    };
+
+    let newBox = ShippingBox::createNewBox(1, Color::Red, dimension);
+
     newBox.showBox();
 
 }
