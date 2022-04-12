@@ -40,4 +40,12 @@ Compilation of code exercises that needs to be accomplished throughout the cours
 - coding exercise: a8.rs
 - coding exercise: a9.rs
 
-## Section 5 [In Progress]
+## Section 5 
+- Expressions (assign conditional statement to variables)
+- Ownership (borrowing memory location using &)
+- Impl functionality (adding functions to enums and structs via impl)
+- coding exercise: a10.rs
+- coding exercise: a11.rs
+- coding exercise: a12.rs
+
+## Section 6 [In Progress]
