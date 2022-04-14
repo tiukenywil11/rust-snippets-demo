@@ -1,0 +1,1 @@
+C:\Users\Kenywil-Lenovo\Documents\GitRepos\rust-snippets-demo\Section6\data-collection\target\debug\data-collection.exe: C:\Users\Kenywil-Lenovo\Documents\GitRepos\rust-snippets-demo\Section6\data-collection\src\main.rs
