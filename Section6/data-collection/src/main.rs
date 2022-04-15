@@ -1,3 +1,8 @@
+// a structure test, with score data
+struct Test {
+    score: i32
+}
+
 fn main() {
 
     // vec macro, is similar to the code snipper below [vector manual]
@@ -23,6 +28,18 @@ fn main() {
     // for is a loop, that's specific for collections
     for num in my_numbers {
         println!("{:?}", num);
+    }
+
+    // create a vector with Test struct datas
+    let my_scores = vec![
+        Test {score: 90},
+        Test {score: 88},
+        Test {score: 77},
+        Test {score: 93},
+    ];
+
+    for test in my_scores {
+        println!{"score = {:?}", test.score};
     }
 
 }
