@@ -48,4 +48,11 @@ Compilation of code exercises that needs to be accomplished throughout the cours
 - coding exercise: a11.rs
 - coding exercise: a12.rs
 
-## Section 6 [In Progress]
+## Section 6
+- vectors
+- string
+- borrowed string
+- coding exercise: a13.rs
+- coding exercise: a14.rs
+
+## Section 7 [In Progress]
