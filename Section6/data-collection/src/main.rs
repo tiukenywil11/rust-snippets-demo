@@ -3,6 +3,16 @@ struct Test {
     score: i32
 }
 
+// string
+// strings are automatically borrowed
+fn print_it(data: &str) {
+    println!("{:?}", data);
+}
+
+struct Employee {
+    name: String,
+}
+
 fn main() {
 
     // vec macro, is similar to the code snipper below [vector manual]
@@ -30,7 +40,7 @@ fn main() {
         println!("{:?}", num);
     }
 
-    // create a vector with Test struct datas
+    // create a vector with Test struct data
     let my_scores = vec![
         Test {score: 90},
         Test {score: 88},
@@ -41,5 +51,25 @@ fn main() {
     for test in my_scores {
         println!{"score = {:?}", test.score};
     }
+
+    // strings
+
+    // automatically borrowed string '&str'
+    print_it("a string slice");
+    // owned string examples
+    let owned_string = "owned string".to_owned();
+    let another_owned = String::from("another");
+
+    // pass borrowed string, because that's what print_it expects
+    print_it(&owned_string);
+    print_it(&another_owned);
+
+    // call Employee struct, needs to initialized an owned string before assigning
+    // this allows struct Employee to delete the data of String after the program ends
+    let emp_name = "Jayson".to_owned();
+    let emp_name = String::from("Jayson");
+    let emp = Employee {
+        name: emp_name
+    };
 
 }
