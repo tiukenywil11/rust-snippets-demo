@@ -30,6 +30,24 @@ enum Mouse {
     LeftClick,
     RightClick,
     MiddleClick,
+    // advanced enum
+    // new variants with additional data
+    Scroll(i32),
+    Move(i32, i32),
+}
+
+// advanced enum
+
+enum PromoDiscount {
+    NewUser,
+    Holiday(String),
+}
+
+enum Discount {
+    Percent(f64),
+    Flat(i32),
+    Promo(PromoDiscount),
+    Custom(String),
 }
 
 fn main() {
