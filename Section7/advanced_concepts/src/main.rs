@@ -22,6 +22,16 @@ fn print_employee(emp: Employee) {
     println!("{:?}", emp);
 }
 
+// type annotations
+
+fn print_many(msg: &str, count: i32) {}
+
+enum Mouse {
+    LeftClick,
+    RightClick,
+    MiddleClick,
+}
+
 fn main() {
 
     let me = Employee {
@@ -46,4 +56,21 @@ fn main() {
     // with Clone and Copy macros derived to struct "Employee", and enum "Position". Using "me" without borrowing will not cause an error, since a new copy is passed.
     print_employee(me);
     print_employee(me);
+
+    // type annotations
+
+    let num: i32 = 15;
+    let a: char = 'a';
+    let left_click: Mouse = Mouse::LeftClick;
+
+    // generics type annotations: Vectors
+    // specify the type of vectors, recommended when using struct / enum type
+    let numbers: Vec<i32> = vec![1,2,3];
+    let letters: Vec<char> = vec!['a', 'b'];
+    let clicks: Vec<Mouse> = vec![
+        Mouse::LeftClick,
+        Mouse::LeftClick,
+        Mouse::RightClick,
+    ];
+
 }
