@@ -50,6 +50,12 @@ enum Discount {
     Custom(String),
 }
 
+// advance match
+struct Ticket { 
+    event: String,
+    price: i32,
+}
+
 fn main() {
 
     let me = Employee {
@@ -91,4 +97,37 @@ fn main() {
         Mouse::RightClick,
     ];
 
+    // advance match
+    let n = 3;
+    match n {
+        3 => println!("three"),
+        // this is replaced by "other"
+        // _=> println!("number: {:?}", n)
+        other => println!("number: {:?}", other)
+    }
+
+    // match variant with extra data
+    let flat = Discount::Flat(2);
+
+    match flat {
+        Discount::Flat(2) => println!("flat 2"),
+        // ignore any number on Flat discount
+        // underscore replaced by 'amount'
+        // Discount::Flat(_) =>
+        Discount::Flat(amount) => println!("flat discount of {:?}", amount),
+        // ignore everything else
+        _ => ()
+    }
+
+    // match struct
+    let concert = Ticket {
+        event: "concert".to_owned(),
+        price: 50
+    };
+
+    match concert {
+        Ticket {price: 50, event} => println!("event @50 = {:?}", event),
+        // only match price whatever it may be in struct
+        Ticket {price, ..} => println!("price = {:?}", price),
+    }
 }
