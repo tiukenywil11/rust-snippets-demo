@@ -56,6 +56,45 @@ struct Ticket {
     price: i32,
 }
 
+// option: optional data
+
+/*
+-- T is a placeholder type, can be anything
+enum Option<T> {
+    -- T is whatever type specified by the program
+    Some(T),
+    None
+}
+*/
+
+struct Customer {
+    age: Option<i32>,
+    email: String,
+}
+
+struct GroceryItem {
+    name: String,
+    qty: i32,
+}
+
+// returns optional data
+fn find_quantity(name: &str) -> Option<i32> {
+    
+    let groceries = vec![
+        GroceryItem{ name: "bananas".to_owned(), qty: 4, },
+        GroceryItem{ name: "eggs".to_owned(), qty: 12, },
+        GroceryItem{ name: "bread".to_owned(), qty: 1, },
+    ];
+
+    for item in groceries {
+        if item.name == name {
+            return Some(item.qty);
+        }
+    }
+    // else returns 'None'
+    None
+}
+
 fn main() {
 
     let me = Employee {
@@ -130,4 +169,23 @@ fn main() {
         // only match price whatever it may be in struct
         Ticket {price, ..} => println!("price = {:?}", price),
     }
+
+    // option
+
+    let mark = Customer {
+        age: Some(22), email: "mark@example.com".to_owned(),
+    };
+
+    let becky = Customer {
+        age: None, email: "becky@example.com".to_owned(),
+    };
+
+    match becky.age{
+        Some(age) => println!("customer is {:?} years old", age),
+        None => println!("customer age is not provided")
+    }
+
+    let quantity = find_quantity("bananas");
+
+    println!("quantity: {:?}", quantity);
 }
