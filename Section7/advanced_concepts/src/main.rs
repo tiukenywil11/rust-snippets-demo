@@ -101,6 +101,7 @@ struct Survey {
     q3: Option<String>,
 }
 
+/// This is a documentation comment
 fn main() {
 
     let me = Employee {

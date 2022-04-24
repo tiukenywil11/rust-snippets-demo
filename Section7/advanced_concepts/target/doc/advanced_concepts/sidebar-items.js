@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["Discount",""],["Mouse",""],["Position",""],["PromoDiscount",""]],"fn":[["find_quantity",""],["main","This is a documentation comment"],["print_employee",""],["print_many",""]],"struct":[["Customer",""],["Employee",""],["GroceryItem",""],["Survey",""],["Ticket",""]]});
