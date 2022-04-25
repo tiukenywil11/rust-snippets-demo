@@ -217,4 +217,14 @@ fn main() {
         None => println!("q3: no response")
     }
 
+    // using rust standard library [https://doc.rust-lang.org/std/#modules]
+
+    // use rust vector library [https://doc.rust-lang.org/std/vec/struct.Vec.html] 
+    let numbers = vec![1, 2, 3];
+
+    match numbers.is_empty() {
+        true => println!("no numbers"),
+        false => println!("has numbers")
+    }
+
 }
