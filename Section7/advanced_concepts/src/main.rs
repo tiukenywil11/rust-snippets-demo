@@ -101,6 +101,28 @@ struct Survey {
     q3: Option<String>,
 }
 
+// result
+
+/*
+-- result is an enum with 2 variance, Ok with parameter T (any type), and Error with parameter E (any type for error)
+enum Result<T, E> {
+    Ok(T),
+    Err(E)
+}
+*/
+
+/*
+-- function get sound returns sound data if successful, and returns a string if unsuccessful
+-- SoundData is a fictional data, so this would cause an error
+fn get_sound(name: &str) -> Result<SoundData, String> {
+    if name == "alert" {
+        Ok(SoundData::new("alert")),
+    } else {
+        Err("unable to find sound data".to_owned())
+    }
+}
+*/
+
 /// This is a documentation comment
 fn main() {
 
@@ -227,4 +249,14 @@ fn main() {
         false => println!("has numbers")
     }
 
+    // result
+    
+    /* 
+    -- SoundData is a fictional data, so this would cause an error
+    let sound = get_sound("alert");
+    match sound {
+        Ok(_) => println!("sound data located"),
+        Err(e) => println!("error: {:?}", e),
+    }
+    */
 }
